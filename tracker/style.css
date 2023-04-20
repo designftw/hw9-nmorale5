@@ -1,0 +1,14 @@
+#app:not(.logged-in) :is(#save_button, #logout_button, #user_info),
+#app.logged-in #login_button {
+	display: none;
+}
+
+.loader, #user_avatar {
+	width: 1em;
+	height: 1em;
+}
+
+#app:not(.loading) .show-on-loading,
+#app:not(.saving) .show-on-saving {
+	display: none;
+}

@@ -4,24 +4,13 @@
     "meal": "Mac n Cheese",
     "calories": 400,
     "health": 5,
-    "satisfaction": 10,
-    "groups": [
-      "dairy",
-      "grains"
-    ]
+    "satisfaction": 10
   },
   {
     "datetime": "2023-04-11T19:00:02",
     "meal": "Baconator",
     "calories": 1200,
     "health": 1,
-    "satisfaction": 6.5,
-    "groups": [
-      "protein",
-      "grains",
-      "dairy",
-      "fruits",
-      "vegetables"
-    ]
+    "satisfaction": 6
   }
 ]

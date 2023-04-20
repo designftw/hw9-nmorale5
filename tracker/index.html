@@ -5,43 +5,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tracker</title>
+	<link rel="stylesheet" href="style.css">
 	<script src="index.js" type="module"></script>
 </head>
 <body>
+<div id="app">
 
 <header>
-	<button id="save_button">Save</button>
+	<div class="backend-controls">
+		<div id="user_info">
+			<img src="" alt="" id="user_avatar">
+			<span id="user_name"></span>
+		</div>
+		<button id="login_button">Log in</button>
+		<button id="logout_button">Log out</button>
+		<button id="save_button">Save</button>
+		<img src="img/loader.svg" alt="" class="loader show-on-saving">
+	</div>
 </header>
 
 <template id="entry_template">
 	<article class="entry">
 		<form>
 			<label>Date & Time: <input type="datetime-local" name="datetime"></label>
-			<label>Notes: <textarea name="notes"></textarea></label>
+			<label>Meal: <input type="text" name="meal"></label>
+			<label>Calories: <input type="number" name="calories"></label>
+			<label>Healthfulness: <input type="range" name="health" min="0" max="10" step="1"></label>
+			<label>Satisfaction: <input type="range" name="health" min="0" max="10" step="1"></label>
 		</form>
 	</article>
 </template>
 
-<main>
+<main id="tracker">
 	<button id="add_entry_button">Add entry</button>
 </main>
 
-<details>
-	<summary>Raw data</summary>
-	<pre id="data">
-		[
-			{
-				"datetime": "2023-04-10T10:00:00",
-				"notes": "Woke up happy."
-			},
-			{
-				"datetime": "2023-04-11T19:00:02",
-				"notes": "Stressed out."
-			}
-		]
-	</pre>
-</details>
-
-
+</div>
 </body>
 </html>
