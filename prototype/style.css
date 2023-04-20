@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  background-color: #c6bb93;
+  color: rgb(38, 24, 2);
+}
+
+main {
+  text-align: justify;
+}
+
+header, h2, figure {
+  text-align: center;
+}
+
+p, li, a {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+hr {
+  border: 1px solid rgb(38, 24, 2);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 5% 15% 5% 15%;
+}
+@media (max-width: 850px) {
+  body {
+    margin: 5% 5% 5% 5%;
+  }
+}

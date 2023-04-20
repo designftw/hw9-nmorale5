@@ -23,9 +23,9 @@
 /* your css here */
 * {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  --gold: rgb(69, 58, 11);
-  --lblue: rgb(153, 187, 222);
-  --dblue: rgb(53, 75, 136);
+  --gold: #453a0b;
+  --lblue: #99bbde;
+  --dblue: #354b88;
   color: var(--gold);
 }
 
