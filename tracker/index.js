@@ -19,13 +19,17 @@ export const dom = {
 	tracker: $("#tracker"),
 };
 
-dom.saveButton.addEventListener("click", event => {
+dom.saveButton.addEventListener("click", async event => {
 	let dataToSave = $$(".entry > form").map(form => {
 		let data = new FormData(form);
 		return Object.fromEntries(data.entries());
 	});
 
-	data.innerHTML = JSON.stringify(dataToSave, null, "\t");
+	dom.app.classList.add("saving");
+	dom.saveButton.disabled = true;
+	await backend.store(JSON.stringify(dataToSave, null, "\t"));
+	dom.saveButton.disabled = false;
+	dom.app.classList.remove("saving");
 });
 
 dom.addEntryButton.addEventListener("click", event => {
@@ -52,7 +56,7 @@ function addEntry(data) {
 	let entry = entry_template.content.cloneNode(true);
 
 	for (let prop in data) {
-		console.log(prop)
+		console.log(prop, data[prop], entry)
 		setFormElement(prop, data[prop], entry);
 	}
 
@@ -80,8 +84,7 @@ async function setupData() {
 	dom.app.classList.add("loading");
 	dom.tracker.disabled = true;
 	let storedData = await backend.load();
-	console.log(storedData)
-	for (let entry of storedData) {
+	for (let entry of storedData.slice().reverse()) {
 		addEntry(entry);
 	}
 	dom.app.classList.remove("loading");

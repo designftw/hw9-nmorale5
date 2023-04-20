@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tracker</title>
+	<title>Food Tracker</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="index.js" type="module"></script>
 </head>
@@ -12,6 +12,7 @@
 <div id="app">
 
 <header>
+	<h1>Food Tracker</h1>
 	<div class="backend-controls">
 		<div id="user_info">
 			<img src="" alt="" id="user_avatar">
@@ -27,11 +28,12 @@
 <template id="entry_template">
 	<article class="entry">
 		<form>
-			<label>Date & Time: <input type="datetime-local" name="datetime"></label>
-			<label>Meal: <input type="text" name="meal"></label>
-			<label>Calories: <input type="number" name="calories"></label>
-			<label>Healthfulness: <input type="range" name="health" min="0" max="10" step="1"></label>
-			<label>Satisfaction: <input type="range" name="health" min="0" max="10" step="1"></label>
+			<label class="l1">Date & Time: </label><input type="datetime-local" name="datetime" class="i1">
+			<label class="l2">Meal: </label><input type="text" name="meal" class="i2">
+			<label class="l3">Calories: </label><input type="number" name="calories" class="i3">
+			<label class="l4">Healthfulness: </label><input type="range" name="health" min="0" max="10" step="1" class="i4">
+			<label class="l5">Satisfaction: </label><input type="range" name="satisfaction" min="0" max="10" step="1" class="i5">
+			<br>
 		</form>
 	</article>
 </template>
